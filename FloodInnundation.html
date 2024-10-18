@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148964531-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148964531-1');
+      </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Xiao WU</title>
+        <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Quattrocento+Sans:400,700|Palanquin:400,600|Raleway|Josefin+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+
+
+
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="logo">
+                            <h2><a href="index.html">Xiao WU</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="menu" class="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">Resume</a></li>
+                                <li><a href="portfolio-4.html">Portfolio</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="first-content">
+            <div class="pic index2-picture" style="background: url(assets/images/FloodInnundation_bg.jpg);">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h3><b>Predicting Flood Inundation In Calgary</b>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="index2-content">
+            <div class="container">
+                <div class="row items1">
+                    <div class="col-md-7">
+                        <img src="assets/images/FloodInnundation0.jpg" alt="">
+                        <br>
+                        <br>
+                        <img src="assets/images/FloodInnundation1.jpg" alt="">
+                        <br>
+                        <br>
+                        <img src="assets/images/FloodInnundation2.jpg" alt="">
+                        <br>
+                        <br>
+                        <img src="assets/images/FloodInnundation3.jpg" alt="">
+                        <br>
+                        <br>
+                        <img src="assets/images/FloodInnundation4.jpg" alt="">
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Predicting Flood Inundation In Calgary Using Logistic Regression</h3>
+                        <p>Flooding is a common type of natural disaster which could cause huge economic and social damages. In this project, we built a model using logistic regression to predict the flooding inundation of Calgary. 
+                          <br>
+                          <br>
+                          Calgary experienced a major flood in 2013. During that disaster, five people were confirmed dead as a direct result and over 100,000 people were displaced throughout the region. The Total damage estimates exceeded C$5 billion and in terms of insurable damages, made the 2013 Alberta floods the costliest disaster in Canadian history at $1.7 billion. Therefore, it is important to predict flooding locations and increase the awareness of flood among residents. 
+                          <br>
+                          <br>
+                          In the feature engineering phase, we took four different categories of variables, including Geographical, spatial, social and census data as predictive variables to capture the characters of flooding locations. For instance, we included Elevation, Slope, and Landcover to represent the geographical condition of Calgary. 
+                          <br>
+                          <br>
+                          After modeling the logistic regression. Our AUC was 0.91, which indicates that our model is very good at discriminating between flooded and non-flooded pixels. We also performed a spatial cross-validation and mapped the mean absolute errors in each neighborhood. Mean Absolute Errors are lower in neighborhoods that were further from the actual inundation sites and higher near the flooding sites. We hoped that we were predicting better in neighborhoods that were closer to the inundation site, but we still value that we are over predicting in these neighborhoods because it is better to be prepared for an even more catastrophic flood.
+                          <br>
+                          <br>
+                          We also applied this model to Minneapolis, which is a comparable city with similar geographical and hydrological conditions to examine the generalizability of the model. It is clear to see how much distance to water was weighed in making predictions. When water bodies are mapped, the predicted probability of inundation obviously decreases as a function of distance to the water bodies. Although in theory, this makes sense given how flooding works, it may have reduced the predictive power of other variables which could be very useful in predicting the nuances of flood inundation. We would work on that limitation to improve our model in the future. 
+                          </p>
+                        <div class="details">
+                            <h6> Teammate </h6>
+                            <span>Evan Cernea</span>
+                            <h6> Categories </h6>
+                            <span>Predictive Modeling</span>
+                            <h6> Date </h6>
+                            <span>03/18/2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="main-footer">
+                <p> Copyright © 2019 By Xiao WU</p>
+                <p>Made with Bootstrap Jquery.</p>
+                <div class="icons">
+                    <ul>
+                      <li><a target="_BLANK" href="https://www.linkedin.com/in/xiaowu2018"><i class="fa fa-linkedin"></i> </a></li>
+          						<li><a target="_BLANK" href="https://github.com/EchoWOO"><i class="fa fa-github"></i> </a></li>
+          						<li><a target="_BLANK" href="https://www.facebook.com/people/Echo-Woo/100008072611716"><i class="fa fa-facebook"></i> </a></li>
+          						<li><a target="_BLANK" href="https://twitter.com/EchoWoo1993"><i class="fa fa-twitter"></i></a></li>
+          						<!-- <li><a target="_BLANK" href="https://www.instagram.com/echo_xiao_wu/"><i class="fa fa-instagram"></i> </a></li> -->
+          						<!-- <li><a target="_BLANK" href="http://behance.net/"><i class="fa fa-behance"></i></a></li> -->
+          						<li><a target="_BLANK" href="https://public.tableau.com/profile/xiao.wu#!/"><i class="fa fa-bar-chart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="assets/js/jquery-2.1.4.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.slicknav.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/owl.carousel.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
