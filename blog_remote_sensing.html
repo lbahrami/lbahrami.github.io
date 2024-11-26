@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148964531-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-148964531-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xiao WU</title>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=2432399083751070&autoLogAppEvents=1"></script>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Quattrocento+Sans:400,700|Palanquin:400,600|Raleway|Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
+    </head>
+  <body>
+
+
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="logo">
+              <h2><a href="index.html">Xiao WU</a></h2>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div id="menu" class="menu">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Resume</a></li>
+                <li><a href="portfolio-4.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="first-content">
+      <div class="pic blog1-picture" style="background: url(assets/images/remote_sensing_00.jpg);">
+        <div class="overlay"></div>
+        <div class="content">
+          <h3>Greening Philadelphia Navy Yard:<br/>
+            <br>
+            Measuring Impacts of <br/>
+            <br>
+            Landscape Projects
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="blogdata">
+      <!-- <div class="container">
+        <span>1 October 2018 </span>
+        <p>Manually digitizing maps can be tedious and inaccurate, knowing how to automate the process using ArcMap and R saves a lot of time and can increase the accuracy. This blog provides an approach that uses image processing and remote sensing techniques in R and ArcGIS to digitize image maps – the kind often found in a PDF that provides no way to get at the underlying data. The final output will be georeferenced raster or vector spatial datasets.
+        </p>
+        <h4> Project background </h4>
+        <p>
+          This summer I worked with Audubon Alaska to complete an ecological analysis of the Arctic National Wildlife Refuge. In this blog, I’ll walk through the process I used to extract data from a historic map of porcupine caribou herd calving areas.
+          <br>
+          <br>
+          Caribous are migratory animals that return to specific locations (calving areas) every spring where pregnant females give birth. Although the highest density calving areas may vary from year to year, caribou return to the same general broader areas, making it important to keep track of both annual variation and inter-annual patterns.
+        </p>
+      </div> -->
+    </div>
+    <div class="picbackground">
+      <div class="container">
+        <!-- <img src="assets/images/xiao_wu_2018_som_image5.png" alt=""> -->
+      </div>
+    </div>
+    <div class="blogsection2">
+      <div class="container">
+        <div class="row">
+          <div class="items">
+            <div class="col-md-4">
+              <div class="line"></div>
+              <h6>
+                <em>Dec 2018</br>
+                  <br>
+                  Instructor: Allison Lassiter</br>
+                  <br>
+                  Tag: Remote Sensing
+                </em>
+              </h6>
+            </div>
+            <div class="col-md-8">
+                <p>
+                  How does the landscape projects change in an urban environment? In this project, I used a simple and also most popular indicator in remote sensing,  normalized difference vegetation index, also known as NDVI to examine the change and impact of greenness in the landscape projects in the Navy Yard. <br/>
+                  <br>
+                  I selected my site in the Navy Yard because of its dynamic and urban development in the past 20 years. It used to be a highly industrialized site as the birthplace of the US navy. About 20 years ago, the Navy Yard started the transition from a historical industrial site into a business campus committed to smart energy innovation and sustainability. By analyzing the NDVI change in the Navy Yard, we could possibly see the gradual transition of landscape at a landscape project scale.
+                  <br>
+                  <br>
+                  <center><img src="assets/images/remote_sensing_01.jpg" style="max-width:80%;" alt="Navy Yard landscape projects timeline"></center>
+                </p>
+                <h4> 1. NDVI calculation </h4>
+                <p>
+                  NDVI is short for normalized difference vegetation index. It is a simple graphical indicator that can be used to analyze remote sensing measurements. NDVI measures the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs) and. As the following formula indicates, NDVI uses the NIR and red channels in its calculation:
+                  <br>
+                  <center><img src="assets/images/remote_sensing_02.png" style="max-width:20%;" alt="Navy Yard landscape projects timeline"></center>
+                  <br>
+                  This results in a number between 1 and -1, where pixels with high photosynthetic activity have a high NDVI.  For example, the areas with NDVI values less than 0.1 are usually barren rock, sand, or snow. The areas with relatively higher NDVI values, approximately ranging from 0.2 to 0.5, are usually sparse vegetation, such as shrubs and grasslands or decaying crops. The high NDVI values, approximately 0.6 to 0.9, are usually dense vegetation such as those found in temperate and tropical forests or crops at their peak growth stage.<br/>
+                  <br>
+                  NDVI also has its limitation because it is easily affected by water and moisture. For example, the water on the ground and moisture in the air. Therefore, it is very possible that in one wet year, the NDVI can be a lot higher than the other normal years. In addition to the noise like wetness, the other contributors to the NDVI like the real greening trends, the abrupt change caused by the human activities, the vegetation growth and weather change might also be hard to be separated from the NDVI value, <br/>
+                  <br>
+                  To compare the NDVI throughout time, we used three different ways to get NDVI, using Google Earth Engine Code Editor and RStudio. The data source is the USGS Landsat 7 data. The first way for calculating NDVI is to use the Google Earth Engine mathematical functions to get the normalized difference value for each satellite imagery and then calculate the mean. The second way is based on the first calculation method but apply the cloud mask before getting the mean value of all the NDVI calculations. The third way is to use the USGS Landsat 7 NDVI data directly. Please refer to the previous blogs for more details about the major tools and calculation methods.<br/>
+                  <br>
+                  By comparing the three different NDVI results, I find the NDVI calculated from USGS landsat 7 the most consistent with the most logical values over time. I will use it as the best measurement for the urban landscape change in the Navy Yard. <br/>
+                  <br>
+                  <center><img src="assets/images/remote_sensing_03.gif" style="max-width:80%;" alt="Three different NDVIs"></center>
+                  <br>
+                  <center><img src="assets/images/remote_sensing_04.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                  <br>
+              <h4>2. The General Trend of Greening in the Navy Yard</h4>
+              <p>To answer the question of what is the general trend of greening in the Navy Yard, I used density plots to visualize the distribution of NDVI changing over time. The workflow is shown in the diagram as follows. The density plot is a variation of a histogram that uses kernel smoothing to plot values, allowing for smoother distribution by smoothing out the noise. To minimize the noise effect on visualizing the general trend, I also standardized the dataset to get rid of the noise. If the greenness in the Navy Yard doesn’t change over time, the distribution before and after standardization should look the same.
+                <br>
+                <br>
+                <center><img src="assets/images/remote_sensing_05.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                <br>
+                By comparing the density plots before and after standardization, we can clearly observe the difference across the years. Therefore, we can conclude that the NDVI did change across the years from 1999 to 2018. </h4>
+                <br>
+                <br>
+                <center>
+                <img src="assets/images/remote_sensing_06.jpg" style="max-width:45%;" alt="Three different data sources">
+                <img src="assets/images/remote_sensing_07.jpg" style="max-width:45%;" alt="Three different data sources"></center>
+                <br>
+                <br>
+                I also plotted the mean value of each year in this line graph. Then used a loess function to fit each years’mean values. We can see the greenness of navy yard experienced continuous increasing from 1999 to 2005. And then experienced small changes but mostly consistent for the rest of the year. Generally, the NDVI trend is keeping increasing. That is to say, the Navy Yard is getting greener and greener from 1999 to 2018.<br/ >
+                <br>
+                <center><img src="assets/images/remote_sensing_08.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                <br>
+                <h4>3. The landscape Projects Change Overtime </h4>
+                <br>
+                <br>
+                We have seen the NDVI in the Navy Yard increasing over time, but how does each individual landscape project change over time? I used the same NDVI dataset calculated from Google Earth Engine. I then created a point cloud shapefile to extract the values of each location from 1999 to 2018 to visualize the change of NDVI over time by line graphs and density plots. By comparing the satellite imagery and the NDVI line graph, we can clearly see the NDVI change corresponding to the certain landscape construction events at each landscape project scale.
+                <br>
+                <br>
+                1) The Central Green</br>
+                The site of Central Green used to be houses in 1999, but the houses were removed after 2002. The site remained as a green area covered with vegetation until 2010, when central green started construction. In 2015 the park as was finally completed and officially opened to the public.<br/>
+                <br>
+                <center><img src="assets/images/remote_sensing_09.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                From the line graph on the Central Green NDVI change, we can clearly read the site history from the mean NDVI of each year. The NDVI increased after the buildings on the site was removed until the construction of the central green started. Then NDVI begins to drop until the construction was finished. After completion, the NDVI came back to increasing again. Which is exactly the same with our estimation of how parks usually changes the greenness of a site.
+                <br>
+                <br>
+                <center><img src="assets/images/remote_sensing_10.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                <br>
+                2) The League Island Park</br>
+                The league island park was designed by wells appel and Philadelphia Water department. It has an area of 2.5 acres and performs an important role in storm water collection for the Navy Yard. From the timeline of the League island park, we can see it also experienced great changes in the past 2 years. The site used to be covered with sparse vegetation. Then temporary buildings were constructed but was also soon removed. The League Island park started construction in 2012, completed in the next year and was opened to public in 2014.<br/>
+                <br>
+                <center><img src="assets/images/remote_sensing_11.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                <br>
+                Similarly, we can also see a trend like central green in League Island Park’s NDVI line graph. In 2012, when construction of the park started, the NDVI began to drop, but the construction period of the the League Island park was much shorter, so the NDVI started to increase soon after the park was officially opened to the public.<br/>
+                <br>
+                <center><img src="assets/images/remote_sensing_12.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                <br>
+                3) The Crescent Park</br>
+                The crescent park is another park designed by Wells Appel with an area of 3.46 acre. It was one of the first parks completed in the Navy yard designed as green infrastructure and to improve the environmental quality of the business area. From the historical images of the crescent park, we can see that it also experienced the removal of site buildings, a process of returning the site to public as green open space and finally become a park with green infrastructure.<br/>
+                <br>
+                <center><img src="assets/images/remote_sensing_13.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                The crescent park NDVI is different from all the other parks, it almost did not experience any decreasing of the value but keeps increasing throughout the time. This might because most of the park is designed to be sunny lawn with less shrub and trees, which is similar to the condition before the park was built. So the NDVI did not decrease during the process.<br/>
+                <br>
+                <center><img src="assets/images/remote_sensing_14.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                <br>
+                4) The Marine Parade Ground</br>
+                The last park, the marine parade ground is an historic site. The site saw the growth of the us navy and has remained an open space ever since the Navy Yard was constructed. From the timeline of historic images of the marine parade ground. We can see that the context of the park changed a lot during the time, but the park itself remained the same throughout the time. The park was intentionally left there without design because of its special historical meanings. From 2010 to 2014, some of the trees on the site were removed probably because they died or new renovation was made.<br/>
+                <br>
+                <center><img src="assets/images/remote_sensing_15.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                From the NDVI line plots, we see the NDVI is generally increasing except the period between 2010 2014. That was the time when the trees on the site was removed. In the rest of the time the NDVI is increasing. Therefore, we can conclude that the greenness trend of marine parade ground is getting greener and greener.<br/>
+                <br>
+                <center><img src="assets/images/remote_sensing_16.jpg" style="max-width:80%;" alt="Three different data sources"></center>
+                <br>
+                <br>
+                <h4>4. Validating the Results </h4>
+                <br>
+                <br>
+                To get a better sense of how the NDVI value represents the site greenness condition, I also went to the site to valid the result. I compared the different NDVI values at various locations with what is really on the site. Through the comparison we can see that the NDVI is a good reflection of the vegetation condition at each location.</br>
+                <br>
+                For example, the areas with lawns and shrubs has a value of 0.32</br>
+                <br>
+                <center><img src="assets/images/remote_sensing_17.jpg" style="max-width:50%;" alt="Three different data sources"></center>
+                <br>
+                And a grassland without too much human intervention can be as high as 0.62. Therefore, what we see from the site indicates that NDVI is just an indicator of vegetation quantity and health, but not the greenness quality.<br>
+                <br>
+                <center><img src="assets/images/remote_sensing_18.jpg" style="max-width:50%;" alt="Three different data sources"></center>
+                <br>
+                <br>
+                To help people get a better understanding how NDVI performs at each location in the Navy Yard, I developed a very simple web application to compare the value of each location with satellite images. You can check it out here. This simple web app realized the function of syncing the satellite imagery and the NDVI map with the mouse movement, so that people can get a clear understanding of what is exactly at the low NDVI locations.<br>
+                <br>
+                <center><img src="assets/images/remote_sensing_19.jpg" style="max-width:50%;" alt="Three different data sources"></center>
+                <br>
+                <h4>5. Conclusions</h4>
+                <br>
+                <br>
+                This study is a proof of concept to examine if NDVI is the best measurement of landscape change overtime. We can clearly see the parks and the Navy Yard getting greener, however, the higher NDVI values do not indicate the landscape quality is getting higher. At the human perception level, NDVI might not be the best.
+                <br>
+                <br>
+                I also understand there are limitations of this study. For example, the resolution of the satellite imagery and the noise in the satellite images themselves. We are also omitting some NDVI values by just looking at the mean value.
+                <br>
+                <br>
+                There are still lots of potential to improve this project. There is also one question I would leave here for you if you are interested in observing the landscape change in the urban environment. If NDVI is not the best in representing the greenness at the project level, which will be the best?
+                <br>
+              </p>
+            <div class="btn-load-more">
+  						<a class="load-more" href="https://drive.google.com/file/d/1WlxBhoHLMOijnZm7mmdn30-50u4jwBeo/view?usp=sharing">Report</a>
+  						<br>
+  						<br>
+            </div>
+            <div class="btn-load-more">
+  						<a class="load-more" href="http://echowoo.com/How-does-landscape-project-change-in-Navy-Yard.github.io/">WebApp</a>
+  						<br>
+            </div>
+              <div>
+              <center><div class="fb-comments" data-colorscheme = 'dark' data-mobile data-href="https://echowoo.com/blog_remote_sensing.html" data-width="50%" data-numposts="5"></div><center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-content">
+      <!-- <div class="container"> -->
+      <!-- <h5 class="item">Leave a reply</h5>
+          <form class="row" action="#">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input placeholder="Name" type="text" name="firstname"> <br>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input placeholder="Email" type="text" name="email"> <br>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input placeholder="Subject" type="text" name="subject"> <br>
+                            </div>
+                            <div class="col-md-12 form-area">
+                                <textarea placeholder="Message" name="message"></textarea>
+                                <input type="submit" value="Comment">
+                            </div>
+                 </form> -->
+      <!-- </div> -->
+      <!-- <div id='gitalk-container'>
+        <script>
+          const gitalk = new Gitalk({
+            clientID: 'eba23a9f84ea9bdf13f3',
+            clientSecret: '94637ef6a71f0f23ab4d87456d5b0dbee98f22d2',
+            repo: 'EchoWoo.github.io',
+            owner: 'EchoWOO',
+            admin: ['EchoWOO'],
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            createIssueManually: true,
+            distractionFreeMode: false  // Facebook-like distraction free mode
+          })
+            // reference: https://my.oschina.net/u/3729927/blog/1931115
+          gitalk.render('gitalk-container')
+        </script>
+      </div> -->
+      <!-- <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="560" data-include-parent="false" data-numposts="5">
+      </div> -->
+    </div>
+
+
+    <footer>
+      <div class="main-footer">
+        <p> Copyright © 2019 By Xiao WU</p>
+        <p>Made with Bootstrap Jquery.</p>
+        <div class="icons">
+          <ul>
+            <li><a target="_BLANK" href="https://www.linkedin.com/in/xiaowu2018"><i class="fa fa-linkedin"></i> </a></li>
+						<li><a target="_BLANK" href="https://github.com/EchoWOO"><i class="fa fa-github"></i> </a></li>
+						<li><a target="_BLANK" href="https://www.facebook.com/people/Echo-Woo/100008072611716"><i class="fa fa-facebook"></i> </a></li>
+						<li><a target="_BLANK" href="https://twitter.com/EchoWoo1993"><i class="fa fa-twitter"></i></a></li>
+						<!-- <li><a target="_BLANK" href="https://www.instagram.com/echo_xiao_wu/"><i class="fa fa-instagram"></i> </a></li> -->
+						<!-- <li><a target="_BLANK" href="http://behance.net/"><i class="fa fa-behance"></i></a></li> -->
+						<li><a target="_BLANK" href="https://public.tableau.com/profile/xiao.wu#!/"><i class="fa fa-bar-chart"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+      <script src="assets/js/jquery-2.1.4.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/jquery.slicknav.js"></script>
+      <script src="assets/js/isotope.pkgd.min.js"></script>
+      <script src="assets/js/owl.carousel.js"></script>
+      <script src="assets/js/main.js"></script>
+  </body>
+</html>
