@@ -118,12 +118,13 @@
                   <br>
 		  <h4> 3. Correlation of UHI Intensity with Land Use and Socioeconomic Patterns </h4>
 		<p>
-                  NDVI also has its limitation because it is easily affected by water and moisture. For example, the water on the ground and moisture in the air. Therefore, it is very possible that in one wet year, the NDVI can be a lot higher than the other normal years. In addition to the noise like wetness, the other contributors to the NDVI like the real greening trends, the abrupt change caused by the human activities, the vegetation growth and weather change might also be hard to be separated from the NDVI value, <br/>
+                  Pearson’s correlation analysis was used to quantify the strength and direction of relationships between UHI intensity, land use, and socioeconomic variables in Baltimore. This statistical method allows for assessing linear dependencies, providing insight into which factors most significantly influence UHI. By understanding these correlations, we can identify critical drivers of UHI and design targeted mitigation strategies. <br/>
+                  <br>                  
+                  The analysis reveals strong positive correlations between UHI intensity and impervious surfaces (r=0.81), building density (r=0.687), and road density (r=0.669), indicating that built infrastructure significantly elevates surface temperatures. Population density (r=0.400) also shows a moderate positive correlation, while barren land has a weaker effect (r=0.203). Conversely, vegetation coverage, including forest percentage (r=−0.779) and shrub percentage (r=−0.511), exhibits strong negative correlations, highlighting vegetation's cooling role through evapotranspiration and shading. <br/>
                   <br>
-                  To compare the NDVI throughout time, we used three different ways to get NDVI, using Google Earth Engine Code Editor and RStudio. The data source is the USGS Landsat 7 data. The first way for calculating NDVI is to use the Google Earth Engine mathematical functions to get the normalized difference value for each satellite imagery and then calculate the mean. The second way is based on the first calculation method but apply the cloud mask before getting the mean value of all the NDVI calculations. The third way is to use the USGS Landsat 7 NDVI data directly. Please refer to the previous blogs for more details about the major tools and calculation methods.<br/>
-                  <br>
-                  By comparing the three different NDVI results, I find the NDVI calculated from USGS landsat 7 the most consistent with the most logical values over time. I will use it as the best measurement for the urban landscape change in the Navy Yard. <br/>
-                  <br>
+		Socioeconomic factors demonstrate more complex patterns. Weak negative correlations for median age (r=−0.284) and household income (r=−0.079) suggest indirect impacts, potentially linked to vegetation or infrastructure. Renter percentage (r=0.302) correlates positively, indicating UHI challenges in rental-dominated areas with less investment in greening. Additionally, racial and ethnic composition (r=−0.039) reveals equity concerns, warranting further study.
+		  <br>
+		These findings underscore the importance of addressing UHI through targeted greening and equitable infrastructure planning, particularly in densely built and underserved areas.	
                   <center><img src="assets/images/remote_sensing_03.gif" style="max-width:80%;" alt="Three different NDVIs"></center>
                   <br>
                   <center><img src="assets/images/remote_sensing_04.jpg" style="max-width:80%;" alt="Three different data sources"></center>
