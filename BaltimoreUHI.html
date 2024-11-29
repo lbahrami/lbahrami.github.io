@@ -54,18 +54,18 @@
       <div class="pic blog1-picture" style="background: url(assets/images/remote_sensing_00.jpg);">
         <div class="overlay"></div>
         <div class="content">
-          <h3>Greening Philadelphia Navy Yard:<br/>
+          <h3>Impacts of Land Use and Socioeconomic Patterns <br/>
             <br>
-            Measuring Impacts of <br/>
+            on Urban Heat Island <br/>
             <br>
-            Landscape Projects
+            in Baltimore City
           </h3>
         </div>
       </div>
     </div>
     <div class="blogdata">
       <!-- <div class="container">
-        <span>1 October 2018 </span>
+        <span>1 May 2020 </span>
         <p>Manually digitizing maps can be tedious and inaccurate, knowing how to automate the process using ArcMap and R saves a lot of time and can increase the accuracy. This blog provides an approach that uses image processing and remote sensing techniques in R and ArcGIS to digitize image maps – the kind often found in a PDF that provides no way to get at the underlying data. The final output will be georeferenced raster or vector spatial datasets.
         </p>
         <h4> Project background </h4>
@@ -89,49 +89,54 @@
             <div class="col-md-4">
               <div class="line"></div>
               <h6>
-                <em>Dec 2018</br>
+                <em>May 2020</br>
                   <br>
-                  Instructor: Allison Lassiter</br>
+                  Instructor: Dana Tomlin</br>
                   <br>
-                  Tag: Remote Sensing
+                  Tag: Remote Sensing, Spatila Analysis, Logistic Regression
                 </em>
               </h6>
             </div>
             <div class="col-md-8">
                 <p>
-                  How does the landscape projects change in an urban environment? In this project, I used a simple and also most popular indicator in remote sensing,  normalized difference vegetation index, also known as NDVI to examine the change and impact of greenness in the landscape projects in the Navy Yard. <br/>
+                  Baltimore, a historic and urbanizing city, faces significant urban heat island (UHI) effects driven by impervious surfaces and socioeconomic disparities. This study explores spatial patterns of land surface temperature (LST) and UHI intensity from 2013–2019, examining the contributions of land-use factors (e.g., impervious surfaces, vegetation) and socioeconomic variables (e.g., population density, income).  <br/>
                   <br>
-                  I selected my site in the Navy Yard because of its dynamic and urban development in the past 20 years. It used to be a highly industrialized site as the birthplace of the US navy. About 20 years ago, the Navy Yard started the transition from a historical industrial site into a business campus committed to smart energy innovation and sustainability. By analyzing the NDVI change in the Navy Yard, we could possibly see the gradual transition of landscape at a landscape project scale.
+                  Key questions include: What spatial patterns of LST and UHI intensity exist? How do land-use and socioeconomic variables influence UHI? Objectives focus on analyzing these drivers and proposing equitable strategies for UHI mitigation to reduce heat exposure disparities and guide sustainable urban planning.
                   <br>
                   <br>
                   <center><img src="assets/images/remote_sensing_01.jpg" style="max-width:80%;" alt="Navy Yard landscape projects timeline"></center>
                 </p>
-                <h4> 1. NDVI calculation </h4>
+                <h4> 1. Visualization of LST and NDVI Trends </h4>
                 <p>
-                  NDVI is short for normalized difference vegetation index. It is a simple graphical indicator that can be used to analyze remote sensing measurements. NDVI measures the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs) and. As the following formula indicates, NDVI uses the NIR and red channels in its calculation:
+                  Maps of Land Surface Temperature (LST) and Normalized Difference Vegetation Index (NDVI) from 2013 to 2019 reveal thermal and vegetation patterns across Baltimore. High LST values are concentrated in dense urban areas, while green spaces like Druid Hill Park exhibit lower temperatures. NDVI maps highlight vegetation density, showing an inverse relationship between LST and NDVI, emphasizing vegetation’s cooling effect. Temporal trends capture urban greening efforts and vegetation decline, identifying neighborhoods under significant thermal stress. Rising summer temperatures and minimal nighttime cooling during this period intensified UHI effects, underscoring the need for targeted mitigation strategies to reduce heat disparities.
                   <br>
                   <center><img src="assets/images/remote_sensing_02.png" style="max-width:20%;" alt="Navy Yard landscape projects timeline"></center>
                   <br>
-                  This results in a number between 1 and -1, where pixels with high photosynthetic activity have a high NDVI.  For example, the areas with NDVI values less than 0.1 are usually barren rock, sand, or snow. The areas with relatively higher NDVI values, approximately ranging from 0.2 to 0.5, are usually sparse vegetation, such as shrubs and grasslands or decaying crops. The high NDVI values, approximately 0.6 to 0.9, are usually dense vegetation such as those found in temperate and tropical forests or crops at their peak growth stage.<br/>
+		  <h4> 2. LST by Land Use Type </h4>
+		<p>
+                  The analysis of Land Surface Temperature (LST) across different land-use types in Baltimore reveals distinct thermal characteristics. Water surfaces exhibited the lowest variability, with a mean LST of 32.9°C and minimal standard deviation (2.6°C), suggesting consistent cooling effects. Building and road surfaces showed the highest mean LST values at 33.22°C and 32.5°C, respectively, with maximum temperatures reaching up to 46.42°C for buildings, highlighting their role in intensifying Urban Heat Island (UHI) effects. Forest and shrub-covered areas demonstrated significantly lower mean LSTs of 29.67°C and 30.98°C, respectively, with negative impacts on thermal stress due to their cooling effects through shading and evapotranspiration. The variation in LST between land-use types underscores the importance of vegetation in mitigating UHI intensity, particularly in urban areas dominated by impervious surfaces such as buildings and roads. These findings highlight the need for targeted greening strategies in areas with high thermal stress.<br/>
                   <br>
-                  NDVI also has its limitation because it is easily affected by water and moisture. For example, the water on the ground and moisture in the air. Therefore, it is very possible that in one wet year, the NDVI can be a lot higher than the other normal years. In addition to the noise like wetness, the other contributors to the NDVI like the real greening trends, the abrupt change caused by the human activities, the vegetation growth and weather change might also be hard to be separated from the NDVI value, <br/>
+		  <h4> 3. Correlation of UHI Intensity with Land Use and Socioeconomic Patterns </h4>
+		<p>
+                  Pearson’s correlation analysis was used to quantify the strength and direction of relationships between UHI intensity, land use, and socioeconomic variables in Baltimore. This statistical method allows for assessing linear dependencies, providing insight into which factors most significantly influence UHI. By understanding these correlations, we can identify critical drivers of UHI and design targeted mitigation strategies. <br/>
+                  <br>                  
+                  The analysis reveals strong positive correlations between UHI intensity and impervious surfaces (r=0.81), building density (r=0.687), and road density (r=0.669), indicating that built infrastructure significantly elevates surface temperatures. Population density (r=0.400) also shows a moderate positive correlation, while barren land has a weaker effect (r=0.203). Conversely, vegetation coverage, including forest percentage (r=−0.779) and shrub percentage (r=−0.511), exhibits strong negative correlations, highlighting vegetation's cooling role through evapotranspiration and shading. <br/>
                   <br>
-                  To compare the NDVI throughout time, we used three different ways to get NDVI, using Google Earth Engine Code Editor and RStudio. The data source is the USGS Landsat 7 data. The first way for calculating NDVI is to use the Google Earth Engine mathematical functions to get the normalized difference value for each satellite imagery and then calculate the mean. The second way is based on the first calculation method but apply the cloud mask before getting the mean value of all the NDVI calculations. The third way is to use the USGS Landsat 7 NDVI data directly. Please refer to the previous blogs for more details about the major tools and calculation methods.<br/>
-                  <br>
-                  By comparing the three different NDVI results, I find the NDVI calculated from USGS landsat 7 the most consistent with the most logical values over time. I will use it as the best measurement for the urban landscape change in the Navy Yard. <br/>
-                  <br>
+		Socioeconomic factors demonstrate more complex patterns. Weak negative correlations for median age (r=−0.284) and household income (r=−0.079) suggest indirect impacts, potentially linked to vegetation or infrastructure. Renter percentage (r=0.302) correlates positively, indicating UHI challenges in rental-dominated areas with less investment in greening. Additionally, racial and ethnic composition (r=−0.039) reveals equity concerns, warranting further study.
+		  <br>
+		These findings underscore the importance of addressing UHI through targeted greening and equitable infrastructure planning, particularly in densely built and underserved areas.	
                   <center><img src="assets/images/remote_sensing_03.gif" style="max-width:80%;" alt="Three different NDVIs"></center>
                   <br>
                   <center><img src="assets/images/remote_sensing_04.jpg" style="max-width:80%;" alt="Three different data sources"></center>
                   <br>
-              <h4>2. The General Trend of Greening in the Navy Yard</h4>
-              <p>To answer the question of what is the general trend of greening in the Navy Yard, I used density plots to visualize the distribution of NDVI changing over time. The workflow is shown in the diagram as follows. The density plot is a variation of a histogram that uses kernel smoothing to plot values, allowing for smoother distribution by smoothing out the noise. To minimize the noise effect on visualizing the general trend, I also standardized the dataset to get rid of the noise. If the greenness in the Navy Yard doesn’t change over time, the distribution before and after standardization should look the same.
+              <h4>4. Management Implications for Urban Climate at the Local Scale in Baltimore City</h4>
+              <p>Urbanization drives significant environmental changes, impacting land surfaces, biodiversity, and urban life quality. In Baltimore, the Urban Heat Island (UHI) effect is closely linked to impervious surfaces (R²=0.41) and vegetation (NDVI, R²=0.44). A 10% increase in impervious surfaces corresponds to a 0.45°C rise in UHI intensity, underscoring the need for effective land-use management. Vegetation plays a critical role in UHI mitigation, with higher NDVI values reducing heat intensity, though areas with NDVI below 0.3 see weaker effects, highlighting the need for greening less vegetated neighborhoods. Forest coverage is most effective in reducing UHI when increased from 0% to 30%, with benefits tapering off beyond 40%. These findings emphasize the importance of strategic tree planting and vegetation enhancement in densely built urban areas to combat UHI and promote climate resilience.
                 <br>
                 <br>
                 <center><img src="assets/images/remote_sensing_05.jpg" style="max-width:80%;" alt="Three different data sources"></center>
                 <br>
                 <br>
-                By comparing the density plots before and after standardization, we can clearly observe the difference across the years. Therefore, we can conclude that the NDVI did change across the years from 1999 to 2018. </h4>
+                Socioeconomic variables exhibit complex relationships with UHI intensity. Population density correlates positively with UHI, especially in areas with densities between 0 and 5,000 persons/km², but this effect diminishes in neighborhoods exceeding 10,000 persons/km², likely due to cooling from nearby suburban areas. Median household income shows a negative correlation with UHI, particularly in neighborhoods with incomes below $100,000. Higher-income areas often have lower impervious surface coverage (average 12%) and more forest cover (average 28%), reducing UHI intensity. Rentership rates are positively correlated with UHI, as neighborhoods with high renter populations, typically in downtown Baltimore, tend to have limited green infrastructure. </h4>
                 <br>
                 <br>
                 <center>
@@ -143,15 +148,16 @@
                 <br>
                 <center><img src="assets/images/remote_sensing_08.jpg" style="max-width:80%;" alt="Three different data sources"></center>
                 <br>
+		 These findings indicate that UHI intensity in Baltimore is influenced by multiple variables, including landscape patterns, vegetation cover, and socioeconomic factors, which interact in complex ways. To effectively mitigate UHI effects, urban planning must account for these direct and indirect interactions. Strategies should include reducing impervious surfaces, expanding tree canopies, and implementing equitable greening initiatives, particularly in socioeconomically disadvantaged neighborhoods. By integrating landscape and socioeconomic considerations, Baltimore can foster a more sustainable and livable urban environment while addressing climate inequities at the local scale.   
                 <br>
-                <h4>3. The landscape Projects Change Overtime </h4>
+		<br>
+                <h4>5. Conclusion </h4>
                 <br>
                 <br>
-                We have seen the NDVI in the Navy Yard increasing over time, but how does each individual landscape project change over time? I used the same NDVI dataset calculated from Google Earth Engine. I then created a point cloud shapefile to extract the values of each location from 1999 to 2018 to visualize the change of NDVI over time by line graphs and density plots. By comparing the satellite imagery and the NDVI line graph, we can clearly see the NDVI change corresponding to the certain landscape construction events at each landscape project scale.
+                This study analyzed the spatial variation of Land Surface Temperature (LST) and Urban Heat Island (UHI) intensity in the Baltimore metropolitan area, revealing that high LST areas are concentrated in downtown regions with extensive impervious surfaces and minimal vegetation. Impervious surfaces and NDVI were identified as the most influential factors shaping UHI intensity, while socioeconomic variables, such as population density, had indirect effects through their association with impervious surfaces. High-income, low-density areas with more vegetation exhibited reduced UHI intensity.
                 <br>
-                <br>
-                1) The Central Green</br>
-                The site of Central Green used to be houses in 1999, but the houses were removed after 2002. The site remained as a green area covered with vegetation until 2010, when central green started construction. In 2015 the park as was finally completed and officially opened to the public.<br/>
+                <br>                
+                Using a path analysis model, this research provided a comprehensive framework for exploring the impacts of landscape and socioeconomic variables. Key contributions include the integration of multiple drivers, examination of social-ecological-climate interactions, and insights for urban planning. Future research should investigate a broader time period and seasonal UHI variations to better understand the physical and socioeconomic drivers of UHI, supporting the development of sustainable urban environments.<br/>
                 <br>
                 <center><img src="assets/images/remote_sensing_09.jpg" style="max-width:80%;" alt="Three different data sources"></center>
                 <br>
@@ -160,67 +166,8 @@
                 <br>
                 <center><img src="assets/images/remote_sensing_10.jpg" style="max-width:80%;" alt="Three different data sources"></center>
                 <br>
-                <br>
-                2) The League Island Park</br>
-                The league island park was designed by wells appel and Philadelphia Water department. It has an area of 2.5 acres and performs an important role in storm water collection for the Navy Yard. From the timeline of the League island park, we can see it also experienced great changes in the past 2 years. The site used to be covered with sparse vegetation. Then temporary buildings were constructed but was also soon removed. The League Island park started construction in 2012, completed in the next year and was opened to public in 2014.<br/>
-                <br>
-                <center><img src="assets/images/remote_sensing_11.jpg" style="max-width:80%;" alt="Three different data sources"></center>
-                <br>
-                <br>
-                Similarly, we can also see a trend like central green in League Island Park’s NDVI line graph. In 2012, when construction of the park started, the NDVI began to drop, but the construction period of the the League Island park was much shorter, so the NDVI started to increase soon after the park was officially opened to the public.<br/>
-                <br>
-                <center><img src="assets/images/remote_sensing_12.jpg" style="max-width:80%;" alt="Three different data sources"></center>
-                <br>
-                <br>
-                3) The Crescent Park</br>
-                The crescent park is another park designed by Wells Appel with an area of 3.46 acre. It was one of the first parks completed in the Navy yard designed as green infrastructure and to improve the environmental quality of the business area. From the historical images of the crescent park, we can see that it also experienced the removal of site buildings, a process of returning the site to public as green open space and finally become a park with green infrastructure.<br/>
-                <br>
-                <center><img src="assets/images/remote_sensing_13.jpg" style="max-width:80%;" alt="Three different data sources"></center>
-                <br>
-                The crescent park NDVI is different from all the other parks, it almost did not experience any decreasing of the value but keeps increasing throughout the time. This might because most of the park is designed to be sunny lawn with less shrub and trees, which is similar to the condition before the park was built. So the NDVI did not decrease during the process.<br/>
-                <br>
-                <center><img src="assets/images/remote_sensing_14.jpg" style="max-width:80%;" alt="Three different data sources"></center>
-                <br>
-                <br>
-                4) The Marine Parade Ground</br>
-                The last park, the marine parade ground is an historic site. The site saw the growth of the us navy and has remained an open space ever since the Navy Yard was constructed. From the timeline of historic images of the marine parade ground. We can see that the context of the park changed a lot during the time, but the park itself remained the same throughout the time. The park was intentionally left there without design because of its special historical meanings. From 2010 to 2014, some of the trees on the site were removed probably because they died or new renovation was made.<br/>
-                <br>
-                <center><img src="assets/images/remote_sensing_15.jpg" style="max-width:80%;" alt="Three different data sources"></center>
-                <br>
-                From the NDVI line plots, we see the NDVI is generally increasing except the period between 2010 2014. That was the time when the trees on the site was removed. In the rest of the time the NDVI is increasing. Therefore, we can conclude that the greenness trend of marine parade ground is getting greener and greener.<br/>
-                <br>
-                <center><img src="assets/images/remote_sensing_16.jpg" style="max-width:80%;" alt="Three different data sources"></center>
-                <br>
-                <br>
-                <h4>4. Validating the Results </h4>
-                <br>
-                <br>
-                To get a better sense of how the NDVI value represents the site greenness condition, I also went to the site to valid the result. I compared the different NDVI values at various locations with what is really on the site. Through the comparison we can see that the NDVI is a good reflection of the vegetation condition at each location.</br>
-                <br>
-                For example, the areas with lawns and shrubs has a value of 0.32</br>
-                <br>
-                <center><img src="assets/images/remote_sensing_17.jpg" style="max-width:50%;" alt="Three different data sources"></center>
-                <br>
-                And a grassland without too much human intervention can be as high as 0.62. Therefore, what we see from the site indicates that NDVI is just an indicator of vegetation quantity and health, but not the greenness quality.<br>
-                <br>
-                <center><img src="assets/images/remote_sensing_18.jpg" style="max-width:50%;" alt="Three different data sources"></center>
-                <br>
-                <br>
-                To help people get a better understanding how NDVI performs at each location in the Navy Yard, I developed a very simple web application to compare the value of each location with satellite images. You can check it out here. This simple web app realized the function of syncing the satellite imagery and the NDVI map with the mouse movement, so that people can get a clear understanding of what is exactly at the low NDVI locations.<br>
-                <br>
-                <center><img src="assets/images/remote_sensing_19.jpg" style="max-width:50%;" alt="Three different data sources"></center>
-                <br>
-                <h4>5. Conclusions</h4>
-                <br>
-                <br>
-                This study is a proof of concept to examine if NDVI is the best measurement of landscape change overtime. We can clearly see the parks and the Navy Yard getting greener, however, the higher NDVI values do not indicate the landscape quality is getting higher. At the human perception level, NDVI might not be the best.
-                <br>
-                <br>
-                I also understand there are limitations of this study. For example, the resolution of the satellite imagery and the noise in the satellite images themselves. We are also omitting some NDVI values by just looking at the mean value.
-                <br>
-                <br>
-                There are still lots of potential to improve this project. There is also one question I would leave here for you if you are interested in observing the landscape change in the urban environment. If NDVI is not the best in representing the greenness at the project level, which will be the best?
-                <br>
+                <br>    
+                
               </p>
             <div class="btn-load-more">
   						<a class="load-more" href="https://drive.google.com/file/d/1WlxBhoHLMOijnZm7mmdn30-50u4jwBeo/view?usp=sharing">Report</a>
