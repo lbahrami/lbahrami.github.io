@@ -69,12 +69,7 @@
         <p>Manually digitizing maps can be tedious and inaccurate, knowing how to automate the process using ArcMap and R saves a lot of time and can increase the accuracy. This blog provides an approach that uses image processing and remote sensing techniques in R and ArcGIS to digitize image maps – the kind often found in a PDF that provides no way to get at the underlying data. The final output will be georeferenced raster or vector spatial datasets.
         </p>
         <h4> Project background </h4>
-        <p>
-          This summer I worked with Audubon Alaska to complete an ecological analysis of the Arctic National Wildlife Refuge. In this blog, I’ll walk through the process I used to extract data from a historic map of porcupine caribou herd calving areas.
-          <br>
-          <br>
-          Caribous are migratory animals that return to specific locations (calving areas) every spring where pregnant females give birth. Although the highest density calving areas may vary from year to year, caribou return to the same general broader areas, making it important to keep track of both annual variation and inter-annual patterns.
-        </p>
+        <p>          
       </div> -->
     </div>
     <div class="picbackground">
@@ -104,31 +99,35 @@
                   Key questions include: What spatial patterns of LST and UHI intensity exist? How do land-use and socioeconomic variables influence UHI? Objectives focus on analyzing these drivers and proposing equitable strategies for UHI mitigation to reduce heat exposure disparities and guide sustainable urban planning.
                   <br>
                   <br>
-                  <center><img src="assets/images/remote_sensing_01.jpg" style="max-width:80%;" alt="Navy Yard landscape projects timeline"></center>
+                  <center><img src="assets/images/UHI.jpg" style="max-width:80%;" alt="Source: MIT Climate Center"></center>
                 </p>
                 <h4> 1. Visualization of LST and NDVI Trends </h4>
                 <p>
                   Maps of Land Surface Temperature (LST) and Normalized Difference Vegetation Index (NDVI) from 2013 to 2019 reveal thermal and vegetation patterns across Baltimore. High LST values are concentrated in dense urban areas, while green spaces like Druid Hill Park exhibit lower temperatures. NDVI maps highlight vegetation density, showing an inverse relationship between LST and NDVI, emphasizing vegetation’s cooling effect. Temporal trends capture urban greening efforts and vegetation decline, identifying neighborhoods under significant thermal stress. Rising summer temperatures and minimal nighttime cooling during this period intensified UHI effects, underscoring the need for targeted mitigation strategies to reduce heat disparities.
                   <br>
-                  <center><img src="assets/images/remote_sensing_02.png" style="max-width:20%;" alt="Navy Yard landscape projects timeline"></center>
+                  <center><img src="assets/images/LSTNDVI.jpg" style="max-width:20%;" alt="Navy Yard landscape projects timeline"></center>
                   <br>
 		  <h4> 2. LST by Land Use Type </h4>
 		<p>
                   The analysis of Land Surface Temperature (LST) across different land-use types in Baltimore reveals distinct thermal characteristics. Water surfaces exhibited the lowest variability, with a mean LST of 32.9°C and minimal standard deviation (2.6°C), suggesting consistent cooling effects. Building and road surfaces showed the highest mean LST values at 33.22°C and 32.5°C, respectively, with maximum temperatures reaching up to 46.42°C for buildings, highlighting their role in intensifying Urban Heat Island (UHI) effects. Forest and shrub-covered areas demonstrated significantly lower mean LSTs of 29.67°C and 30.98°C, respectively, with negative impacts on thermal stress due to their cooling effects through shading and evapotranspiration. The variation in LST between land-use types underscores the importance of vegetation in mitigating UHI intensity, particularly in urban areas dominated by impervious surfaces such as buildings and roads. These findings highlight the need for targeted greening strategies in areas with high thermal stress.<br/>
                   <br>
+		  <center><img src="assets/images/LU.jpg" style="max-width:20%;" alt="Navy Yard landscape projects timeline"></center>
+                  <br>	
+		  <center><img src="assets/images/LU_LST.jpg" style="max-width:20%;" alt="Navy Yard landscape projects timeline"></center>
+                  <br>	
 		  <h4> 3. Correlation of UHI Intensity with Land Use and Socioeconomic Patterns </h4>
 		<p>
                   Pearson’s correlation analysis was used to quantify the strength and direction of relationships between UHI intensity, land use, and socioeconomic variables in Baltimore. This statistical method allows for assessing linear dependencies, providing insight into which factors most significantly influence UHI. By understanding these correlations, we can identify critical drivers of UHI and design targeted mitigation strategies. <br/>
-                  <br>                  
+                  <br> 
+		  <center><img src="assets/images/LU-02.jpg" style="max-width:20%;" alt="Navy Yard landscape projects timeline"></center>
+                  <br>
                   The analysis reveals strong positive correlations between UHI intensity and impervious surfaces (r=0.81), building density (r=0.687), and road density (r=0.669), indicating that built infrastructure significantly elevates surface temperatures. Population density (r=0.400) also shows a moderate positive correlation, while barren land has a weaker effect (r=0.203). Conversely, vegetation coverage, including forest percentage (r=−0.779) and shrub percentage (r=−0.511), exhibits strong negative correlations, highlighting vegetation's cooling role through evapotranspiration and shading. <br/>
                   <br>
 		Socioeconomic factors demonstrate more complex patterns. Weak negative correlations for median age (r=−0.284) and household income (r=−0.079) suggest indirect impacts, potentially linked to vegetation or infrastructure. Renter percentage (r=0.302) correlates positively, indicating UHI challenges in rental-dominated areas with less investment in greening. Additionally, racial and ethnic composition (r=−0.039) reveals equity concerns, warranting further study.
 		  <br>
 		These findings underscore the importance of addressing UHI through targeted greening and equitable infrastructure planning, particularly in densely built and underserved areas.	
-                  <center><img src="assets/images/remote_sensing_03.gif" style="max-width:80%;" alt="Three different NDVIs"></center>
-                  <br>
-                  <center><img src="assets/images/remote_sensing_04.jpg" style="max-width:80%;" alt="Three different data sources"></center>
-                  <br>
+                  <center><img src="assets/images/Correlation.jpg" style="max-width:80%;" alt="Three different NDVIs"></center>
+                  <br>                  
               <h4>4. Management Implications for Urban Climate at the Local Scale in Baltimore City</h4>
               <p>Urbanization drives significant environmental changes, impacting land surfaces, biodiversity, and urban life quality. In Baltimore, the Urban Heat Island (UHI) effect is closely linked to impervious surfaces (R²=0.41) and vegetation (NDVI, R²=0.44). A 10% increase in impervious surfaces corresponds to a 0.45°C rise in UHI intensity, underscoring the need for effective land-use management. Vegetation plays a critical role in UHI mitigation, with higher NDVI values reducing heat intensity, though areas with NDVI below 0.3 see weaker effects, highlighting the need for greening less vegetated neighborhoods. Forest coverage is most effective in reducing UHI when increased from 0% to 30%, with benefits tapering off beyond 40%. These findings emphasize the importance of strategic tree planting and vegetation enhancement in densely built urban areas to combat UHI and promote climate resilience.
                 <br>
